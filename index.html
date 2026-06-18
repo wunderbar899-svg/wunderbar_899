@@ -1,170 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Responsive Future-Proof Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Scraper Test Sandbox</title>
 
-<style>
-  * {   
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-  }
+    <!-- PASTE YOUR FRESHSALES TRACKING CODE HERE -->
 
-  body {
-    margin: 0;   
-    min-height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .form-card {
-    background: #fff;
-    width: 100%;
-    max-width: 520px;
-    padding: 28px;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  }
-
-  .form-card h2 {
-    margin: 0 0 20px;
-    text-align: center;
-    color: #333;
-  }
-
-  form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group label {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 6px;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 0.95rem;
-    transition: 0.2s ease;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
-  }
-
-  /* Full width elements (like message, buttons) */
-  .full {
-    grid-column: 1 / -1;
-  }
-
-  button {
-    padding: 14px;
-    border-radius: 12px;
-    border: none;  
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  }
-
-  @media (max-width: 480px) {
-    .form-card {
-      padding: 20px;
-    }
-  }
-</style>
-<script
-src='//in.fw-cdn.com/32114306/1127157.js'
-chat='true'>
-</script>
 </head>
-
 <body>
 
-<div class="form-card">
-  <h2>Contact Details</h2>
+    <h1>Integration Test Page</h1>
+    <p>Testing JotForm script loading behavior with CRM tracking snippet.</p>
 
-  <form id="contactForm">
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" placeholder="Enter your name"/>
+    <div class="form-container">
+        <<script type="text/javascript" src="https://form.jotform.com/jsform/261678374005460"></script>>
     </div>
-
-    <div class="form-group">
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" placeholder="Enter phone number" required />
-    </div>
-
-    <div class="form-group full">
-      <label for="email">Email ID</label>
-      <input type="email" id="email" placeholder="Enter your email" required />
-    </div>
-
-    <!-- Future fields can be added like this -->
-    <!--
-    <div class="form-group">
-      <label>Company</label>
-      <input type="text" />
-    </div>
-
-    <div class="form-group full">
-      <label>Message</label>
-      <textarea rows="4"></textarea>
-    </div>
-    -->
-
-    <div class="full">
-      <button type="submit">Submit</button>
-    </div>
-  </form>
-</div>
-<!-- <script>
-  function identify_call() {
-    var new_contact = {
-      "First name": document.getElementById("name").value,
-      "Email": document.getElementById("email").value,
-      "Mobile": document.getElementById("phone").value
-    };
-
-    var identifier = document.getElementById("email").value;
-
-    // Call Freshworks CRM identify (assuming fwcrm is loaded)
-    fwcrm.identify(identifier, new_contact);
-
-    console.log("ran script");
-  }
-
-  // Attach submit handler
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // stop page refresh
-    identify_call();    // call your function
-  });
-</script> -->
 
 </body>
 </html>
